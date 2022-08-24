@@ -1,2 +1,2 @@
 ##alx-higher_level_programming
-0-run --> runs a Python script.
+0x00-python-hello_world 
