@@ -4,5 +4,5 @@ if __name__ == "__main__":
     i = len(sys.argv) - 1
     print("{} argument{}{}"
           .format(i, "" if i == 1 else "s", "." if i == 0 else ":"))
-    for i in range(l):
-        print("{}: {}".format(i + 1, sys.argv[i + 1]))
+    for j in range(i):
+        print("{}: {}".format(j + 1, sys.argv[j + 1]))
