@@ -8,3 +8,4 @@
 100-my_calculator.py imports all functions from the file calculator_1.py and handles basic operations.
 101-easy_print.py prints #pythoniscool, followed by a new line, in the standard output.
 102-magic_calculation.py Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
+103-fast_alphabet.py prints the alphabet in uppercase, followed by a new line.
