@@ -2,6 +2,6 @@
 def safe_print_integer(value):
     try:
         print("{:d}".format(value))
-    except PrintError:
+    except value.DoesNotExist:
         return False
     return True
