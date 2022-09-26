@@ -24,4 +24,10 @@ Public instance method: def integer_validator(self, name, value): that validates
 you can assume name is always a string
 if value is not an integer: raise a TypeError exception, with the message <name> must be an integer
 if value is less or equal to 0: raise a ValueError exception with the message <name> must be greater than 0
+###8-rectangle.py
+a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
+
+Instantiation with width and height: def __init__(self, width, height):
+width and height must be private. No getter or setter
+width and height must be positive integers, validated by integer_validator
 
