@@ -200,7 +200,7 @@ were given"
         s = '[{"x": 101, "y": 20123, "width": 312321, "id": 522244, \
                 "height": 34340}]'
         self.assertEqual(Base.from_json_string(s), d)
-        
+
         list_in = [
             {'id': 89, 'width': 10, 'height': 4},
             {'id': 7, 'width': 1, 'height': 7}
@@ -212,12 +212,49 @@ were given"
         # ----------------- Tests for #16 ------------------------
     def test_I_save_to_file(self):
         '''Tests save_to_file() method.'''
+        import os
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
         Rectangle.save_to_file([r1, r2])
 
         with open("Rectangle.json", "r") as file:
             self.assertEqual(len(file.read()), 105)
+
+            Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        try:
+            os.remove("Rectangle.json")
+        except Exception as ex:
+            pass
+
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r2])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(len(file.read()), 52)
+
+        Square.save_to_file(None)
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        try:
+            os.remove("Square.json")
+        except Exception as ex:
+            pass
+
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        r2 = Square(1)
+        Square.save_to_file([r2])
+        with open("Square.json", "r") as file:
+            self.assertEqual(len(file.read()), 38)
 
         # ----------------- Tests for #18 ------------------------
     def test_J_create(self):
