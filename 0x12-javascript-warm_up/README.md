@@ -128,3 +128,7 @@ The function must be visible from outside
 Prototype: function (number, theFunction)
 You are not allowed to use var
 Files--> 102-main.js
+### 103-object_fct.js
+Update this script by adding a new function incr that increments the integer value.
+
+You are not allowed to use var
