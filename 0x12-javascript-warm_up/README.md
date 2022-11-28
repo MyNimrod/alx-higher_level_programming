@@ -21,3 +21,10 @@ If only one argument is passed to the script, print “Argument found”
 Otherwise, print “Arguments found”
 You must use console.log(...) to print all output
 You are not allowed to use var
+### 3-value_argument.js
+Write a script that prints the first argument passed to it:
+
+If no arguments are passed to the script, print “No argument”
+You must use console.log(...) to print all output
+You are not allowed to use var
+You are not allowed to use length
