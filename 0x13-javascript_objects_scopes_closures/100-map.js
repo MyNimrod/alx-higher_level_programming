@@ -1,6 +1,4 @@
 #!/usr/bin/node
-// maps an array, multiplying each element by its index
-const list = require('./100-data').list;
-const mapped = list.map(function (value, index) { return value * index; });
+const list = require('./100-data.js').list;
 console.log(list);
-console.log(mapped);
+console.log(list.map((item, index) => item * index));
