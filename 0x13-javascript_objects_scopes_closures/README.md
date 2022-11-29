@@ -71,3 +71,10 @@ Write a function that returns the number of occurrences in a list:
 
 Prototype: exports.nbOccurences = function (list, searchElement)
 
+### 8-esrever.js
+
+Write a function that returns the reversed version of a list:
+
+Prototype: exports.esrever = function (list)
+You are not allow to use the built-in method reverse
+
